@@ -122,6 +122,19 @@ strlit.markdown(
         text-align: center;
         border: 2px solid #1E4D2B;
     }
+    .qr-card {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        text-align: center;
+        border-top: 4px solid #25D366;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .whatsapp-btn {
         background-color: #25D366;
         color: white;
@@ -142,7 +155,7 @@ strlit.markdown(
     unsafe_allow_html=True,
 )
 
-# Image Directory Path pointing to your GitHub 'assets' folder
+# Image Directory Path pointing to GitHub 'assets' folder
 IMAGE_DIR = "assets"
 
 
@@ -410,18 +423,18 @@ with tino_col1:
 with tino_col2:
   strlit.markdown(
       """
-        <div class="card" style="text-align: center; padding: 15px; border-top: 4px solid #25D366; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-            <h4 style="color: #1F2937; margin-bottom: 8px; font-size: 1.1rem;">Scan to Connect</h4>
+        <div class="qr-card">
+            <h4 style="color: #111827; margin-bottom: 10px; font-size: 1.2rem; font-family: 'Outfit', sans-serif;">Scan to Connect</h4>
         """,
       unsafe_allow_html=True,
   )
   qr_img = load_image("Screenshot_20260914_222234_WhatsApp.jpg.jpeg")
   if qr_img:
-    strlit.image(qr_img, width=180)
+    strlit.image(qr_img, width=170)
   else:
     strlit.info("WhatsApp QR Code placeholder")
   strlit.markdown(
-      '<p style="font-size: 0.8rem; color: #666; margin-top: 8px;">WhatsApp:'
-      " +27 81 267 8907</p></div>",
+      '<p style="font-size: 0.85rem; color: #4B5563; margin-top: 10px;'
+      ' font-weight: 500;">WhatsApp: +27 81 267 8907</p></div>',
       unsafe_allow_html=True,
   )
