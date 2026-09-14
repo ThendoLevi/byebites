@@ -2,9 +2,6 @@ import os
 from PIL import Image
 import streamlit as strlit
 
-# Image Directory Path
-IMAGE_DIR = "assets"
-
 # Page configuration
 strlit.set_page_config(
     page_title="ByeByeBites - Natural Mosquito Protection",
@@ -145,8 +142,8 @@ strlit.markdown(
     unsafe_allow_html=True,
 )
 
-# Image Directory Path
-IMAGE_DIR = r"D:\Code\websites"
+# Image Directory Path pointing to your GitHub 'assets' folder
+IMAGE_DIR = "assets"
 
 
 def load_image(filename):
@@ -389,7 +386,6 @@ strlit.markdown(
 # --- TINO LABS / DEVELOPER PROMOTION & QR CODE FOOTER ---
 strlit.markdown("<br>", unsafe_allow_html=True)
 
-# Using a balanced 2-column layout for the developer credit
 tino_col1, tino_col2 = strlit.columns([1.3, 1])
 
 with tino_col1:
@@ -425,6 +421,7 @@ with tino_col2:
   else:
     strlit.info("WhatsApp QR Code placeholder")
   strlit.markdown(
-      '<p style="font-size: 0.8rem; color: #666; margin-top: 8px;">WhatsApp: +27 81 267 8907</p></div>',
+      '<p style="font-size: 0.8rem; color: #666; margin-top: 8px;">WhatsApp:'
+      " +27 81 267 8907</p></div>",
       unsafe_allow_html=True,
   )
