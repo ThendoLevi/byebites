@@ -2,6 +2,9 @@ import os
 from PIL import Image
 import streamlit as strlit
 
+# Image Directory Path
+IMAGE_DIR = "assets"
+
 # Page configuration
 strlit.set_page_config(
     page_title="ByeByeBites - Natural Mosquito Protection",
